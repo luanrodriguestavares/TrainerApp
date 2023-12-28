@@ -1,6 +1,6 @@
 {
-  "background_color": "#11144f",
-  "description": "Trainer Digital",
+  "background_color": "#232766",
+  "description": "TrainerApp",
   "dir": "ltr",
   "display": "standalone",
   "name": "TrainerApp",
@@ -10,12 +10,13 @@
   "start_url": "https://luanrodriguestavares.github.io/TrainerApp/",
   "theme_color": "#ffffff",
   "categories": [
+    "lifestyle",
     "sports"
   ],
-
+  "screenshots": [],
   "icons": [
     {
-      "src": "/TrainerApp.png",
+      "src": "/TrainerApp.png"
     }
   ],
   "shortcuts": [
