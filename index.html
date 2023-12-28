@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="TrainerApp">
+    <meta name="keywords" content="treino, dieta, coach">
+    <meta name="author" content="Luan Rodrigues">
+    <meta name="robots" content="index, follow">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <title>TrainerApp</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="icon" href="/TrainerApp.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Nome+da+Fonte:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body class="bg-gray-900 text-gray-100">
+
+
+
+<!-- Bem Vindo -->
+<section id="section1" class="page-section">
+    <div class="overflow-hidden min-h-screen flex flex-col items-center justify-center ml-5">
+        <h1 class="position-absolute text-4xl font-semibold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Bem vindo ao <span class="text-blue-600 dark:text-blue-500 font-extrabold">TrainerApp</span>
+        </h1>
+    </div>
+
+    <div class="fixed bottom-0 right-0">
+        <button id="nextPage1" class="w-[4rem] h-[4rem] mr-2 mb-2 rounded-full bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 text-white font-bold text-center py-2">
+        <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</section>
+
+<section id="section2" class="page-section hidden">
+    <div class="min-h-screen flex flex-col items-start justify-center p-6">
+
+
+      <form id="loginForm" class="w-full max-w-md">
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white mb-6">
+                Entrar
+            </h1>
+
+            <div class="flex flex-col mb-4">
+                <label for="email" class="text-sm font-medium text-gray-900 dark:text-white mb-2">E-mail</label>
+                <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+
+            <div class="flex flex-col mb-4">
+                <label for="password" class="text-sm font-medium text-gray-900 dark:text-white mb-2">Senha</label>
+                <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+
+            <button type="submit" class="bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 text-white font-bold text-center rounded-full py-2 w-full">
+                Entrar
+            </button>
+      </form>
+
+
+      <form id="signupForm" class="hidden w-full max-w-md">
+            <h1 class="text-4xl font-semibold text-gray-900 dark:text-white mb-6">
+                Cadastrar
+            </h1>
+
+            <div class="flex flex-col mb-4">
+                <label for="email" class="text-sm font-medium text-gray-900 dark:text-white mb-2">E-mail</label>
+                <input type="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+
+            <div class="flex flex-col mb-4">
+                <label for="password" class="text-sm font-medium text-gray-900 dark:text-white mb-2">Senha</label>
+                <input type="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+
+            <div class="flex flex-col mb-4">
+                <label for="nome" class="text-sm font-medium text-gray-900 dark:text-white mb-2">Nome Completo</label>
+                <input type="text" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+            </div>
+
+            <button type="submit" class="bg-blue-600 hover:bg-green-500 focus:bg-green-700 text-white font-bold text-center rounded-full py-2 w-full">
+                Cadastrar
+            </button>
+     </form>
+
+      <button id="toggleFormButton" class="text-sm text-gray-500 dark:text-gray-400 mt-4 mb-6" onclick="toggleForm()">Não possui conta? Cadastre-se</button>
+
+      <div class="text-center mx-auto text-gray-500 dark:text-gray-400 mb-4">Ou</div>
+
+      <div class="flex mx-auto mt-4">
+        <button onclick="signInWithGoogle()" class="w-12 h-12 mr-4 bg-red-600 hover:bg-red-500 focus:bg-red-700 text-white font-bold rounded-full">
+          <i class="fab fa-google"></i>
+        </button>
+        <button onclick="signInWithFacebook()" class="w-12 h-12 bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 text-white font-bold rounded-full">
+          <i class="fab fa-facebook"></i>
+        </button>
+      </div>
+
+    </div>
+    <div class="fixed bottom-0 right-0">
+      <button id="nextPage2" class="w-[4rem] h-[4rem] mr-2 mb-2 rounded-full bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 text-white font-bold text-center py-2">
+        <i class="fas fa-arrow-right"></i>
+      </button>
+    </div>
+</section>
+
+<section id="section3" class="page-section hidden">
+    <div class="overflow-hidden min-h-screen flex flex-col p-6">
+        <h1 class="text-4xl font-semibold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Me informe sobre <span class="text-blue-600 dark:text-blue-500 font-extrabold">você</span>
+        </h1>
+        <div class="mt-8">
+            <label for="nome" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Como prefere ser chamado(a) ?</label>
+            <input id="nome" type="text" id="nome" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+        </div>
+        <div class="mt-8">
+            <label for="idade" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Idade</label>
+            <input type="text" id="idade" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
+        </div>
+        <div class="mt-8">
+            <label for="genero" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Genero</label>
+                <select id="genero" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
+                    <option value="US">Masculino</option>
+                    <option value="CA">Feminino</option>
+                    <option value="FR">Outro</option>
+                </select>
+        </div>
+    </div>
+    <div class="fixed bottom-0 right-0">
+        <button id="nextPage3" class="w-[4rem] h-[4rem] mr-2 mb-2 rounded-full bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 text-white font-bold text-center py-2">
+        <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</section>
+
+<section id="section4" class="page-section hidden">
+    <div class="overflow-hidden min-h-screen flex flex-col p-6">
+        <h1 class="text-4xl font-semibold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Bem-vindo, <span id="nomeUsuarioResultado" class="text-blue-600 dark:text-blue-500 font-extrabold"></span>
+        </h1>
+        <p class="text-justify mt-3 text-lg font-normal text-gray-200 dark:text-gray-400">Por gentileza, nos informe:</p>
+        <div class="flex flex-col sm:flex-row">
+            <div class="w-full sm:w-1/2 mt-8 sm:mr-4">
+                <label for="altura" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Altura<span class="mt-5 mb-6 text-lg font-normal text-gray-200 dark:text-gray-400"> (cm)</span></label>
+                <input type="text" id="altura" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="formatarAltura(this)" required>
+            </div>
+            <div class="w-full sm:w-1/2 mt-8">
+                <label for="peso" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Peso<span class="mt-5 mb-6 text-lg font-normal text-gray-200 dark:text-gray-400"> (kg)</span></label>
+                <input type="text" id="peso" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" oninput="formatarPeso(this)" required>
+            </div>
+        </div>
+        <div class="relative mt-3">
+            <p class="text-justify mt-3 mb-4 text-lg font-normal text-gray-200 dark:text-gray-400">Em uma escala de prática de atividade física, em qual você se enquadra?</p>
+            <input id="activity-range-input" type="range" value="5" min="0" max="10" step="1" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer dark:bg-gray-700">
+            <div class="flex justify-between mt-2">
+                <span class="text-sm text-gray-500 dark:text-gray-400">Inativo</span>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Moderado</span>
+                <span class="text-sm text-gray-500 dark:text-gray-400">Ativo</span>
+            </div>
+        </div>
+    </div>
+    <div class="fixed bottom-0 right-0">
+        <button id="nextPage4" class="w-[4rem] h-[4rem] mr-2 mb-2 rounded-full bg-blue-600 hover:bg-blue-500 focus:bg-blue-700 text-white font-bold text-center py-2">
+        <i class="fas fa-arrow-right"></i>
+        </button>
+    </div>
+</section>
+
+
+<section id="section5" class="page-section hidden">
+    <div class="flex flex-col p-6">
+        <div id="loading" class="hidden fixed inset-0 bg-gray-900 bg-opacity-50 flex items-center justify-center h-screen">
+            <div role="status" class="flex flex-col items-center justify-center">
+                <svg aria-hidden="true" class="w-8 h-8 text-gray-200 animate-spin dark:text-gray-600 fill-blue-600" viewBox="0 0 100 101" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M100 50.5908C100 78.2051 77.6142 100.591 50 100.591C22.3858 100.591 0 78.2051 0 50.5908C0 22.9766 22.3858 0.59082 50 0.59082C77.6142 0.59082 100 22.9766 100 50.5908ZM9.08144 50.5908C9.08144 73.1895 27.4013 91.5094 50 91.5094C72.5987 91.5094 90.9186 73.1895 90.9186 50.5908C90.9186 27.9921 72.5987 9.67226 50 9.67226C27.4013 9.67226 9.08144 27.9921 9.08144 50.5908Z" fill="currentColor"/>
+                    <path d="M93.9676 39.0409C96.393 38.4038 97.8624 35.9116 97.0079 33.5539C95.2932 28.8227 92.871 24.3692 89.8167 20.348C85.8452 15.1192 80.8826 10.7238 75.2124 7.41289C69.5422 4.10194 63.2754 1.94025 56.7698 1.05124C51.7666 0.367541 46.6976 0.446843 41.7345 1.27873C39.2613 1.69328 37.813 4.19778 38.4501 6.62326C39.0873 9.04874 41.5694 10.4717 44.0505 10.1071C47.8511 9.54855 51.7191 9.52689 55.5402 10.0491C60.8642 10.7766 65.9928 12.5457 70.6331 15.2552C75.2735 17.9648 79.3347 21.5619 82.5849 25.841C84.9175 28.9121 86.7997 32.2913 88.1811 35.8758C89.083 38.2158 91.5421 39.6781 93.9676 39.0409Z" fill="currentFill"/>
+                </svg>
+                <span class="text-gray-200 mt-4">Calculando informações...</span>
+            </div>
+        </div>
+        <h1 class="text-4xl font-semibold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+            Resultados
+        </h1>
+        <div id="resultados" class="mt-8 ih"></div>
+    </div>
+</section>
+
+<!-- Fim - Bem Vindo -->
+
+
+    <script>
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.1/flowbite.min.js"></script>
+    <script src="/script.js"></script>
+
+</body>
+</html>

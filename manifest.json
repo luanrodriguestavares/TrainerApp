@@ -1,0 +1,30 @@
+{
+  "background_color": "#11144f",
+  "description": "Trainer Digital",
+  "dir": "ltr",
+  "display": "standalone",
+  "name": "TrainerApp",
+  "orientation": "any",
+  "scope": "/",
+  "short_name": "TrainerApp",
+  "start_url": "trainerpro.netlify.app/",
+  "theme_color": "#ffffff",
+  "categories": [
+    "sports"
+  ],
+
+  "icons": [
+    {
+      "src": "/TrainerApp.png",
+      "type": "image/x-icon"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "TrainerApp",
+      "url": "trainerpro.netlify.app/",
+      "description": "TrainerDigital"
+    }
+  ],
+  "lang": "pt"
+}
