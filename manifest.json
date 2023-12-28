@@ -16,13 +16,12 @@
   "icons": [
     {
       "src": "/TrainerApp.png",
-      "type": "image/x-icon"
     }
   ],
   "shortcuts": [
     {
       "name": "TrainerApp",
-      "url": "trainerpro.netlify.app/",
+      "url": "https://luanrodriguestavares.github.io/TrainerApp/",
       "description": "TrainerDigital"
     }
   ],
